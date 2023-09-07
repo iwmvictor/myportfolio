@@ -5,6 +5,11 @@ Welcome to my GitHub repository where I showcase my journey as a computer engine
 
 This portfolio website is designed to showcase my skills, projects, and experience. It provides an interactive and visually appealing way for visitors to learn more about me and my work.
 
+## Preview
+
+![Porfolio page](/preview.png)
+
+
 ## Features
 
 - Responsive design for various screen sizes.
@@ -15,8 +20,8 @@ This portfolio website is designed to showcase my skills, projects, and experien
 
 ## Technologies Used
 
-- HTML5
-- CSS3 (including Flexbox and CSS Grid)
+- HTML
+- CSS (including Flexbox and CSS Grid)
 - JavaScript (for interactivity)
 - Font Awesome (for icons)
 - Owl Carousel (for project carousel)
