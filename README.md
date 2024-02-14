@@ -2,7 +2,7 @@
 
 A passionate Software Developer and Tech Enthusiast
 
-![Coding](https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif)
+![Header](https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/dempgi7-520f8d5f-63d4-4453-8822-dbc149ae27f8.gif?alt=media&token=91c0c7b2-93c3-4029-b011-1a8703c5730d)
 
 ## About Me
 
@@ -36,22 +36,13 @@ I also have experience in graphic design using Canva.
 
 ## Preview
 
-![Porfolio page](/preview.png)
+![Porfolio page](./public/preview.png)
 
 
-## Features
-
-- Responsive design for various screen sizes.
-- Sections for displaying projects, skills, experience, and contact information.
-- Interactive animations and scroll effects.
-- Back-to-top button for easy navigation.
-- Contact form for users to reach out.
-
-## Technologies Used
-
-- HTML
-- CSS (including Flexbox and CSS Grid)
-- JavaScript (for interactivity)
-- Font Awesome (for icons)
-- Owl Carousel (for project carousel)
-- Google Fonts (for typography)
+## Contact Me
+- Email: [isingizwemunezerovictor5@gmail.com](mailto:isingizwemunezerovictor5@gmail.com)
+- WhatsApp: [![WhatsApp](https://img.shields.io/badge/WhatsApp-Message-green?style=flat&logo=whatsapp)](https://api.whatsapp.com/send/?phone=250781996271&text=+%60%60%60Hi+Iwmvictor%2C%60%60%60+%0A%0A+_I%27ve+seen+your+Ressume+and+I%27d+like+to+schedule+a+call+to+discuss+your+services._+&type=phone_number&app_absent=0)
+- Instagram: [![Instagram](https://img.shields.io/badge/Instagram-Follow-blue?style=flat&logo=instagram)](https://instagram.com/iwmvictor)
+- Twitter: [![Twitter](https://img.shields.io/badge/Twitter-Follow-lightblue?style=flat&logo=twitter)](https://twitter.com/iwmvictor)
+- TikTok: [![TikTok](https://img.shields.io/badge/TikTok-Follow-red?style=flat&logo=tiktok)](https://www.tiktok.com/@iwmvictor)
+- YouTube: [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=flat&logo=youtube)](https://youtube.com/@iwmvik)
