@@ -1,9 +1,38 @@
-# portfolio
-Welcome to my GitHub repository where I showcase my journey as a computer engineering student with a passion for development, programming, and graphic design. Feel free to explore my projects and get in touch for collaborations or to learn more about my work.
+# Hi 👋, I'm Iwmvictor
 
-## About
+A passionate Software Developer and Tech Enthusiast
 
-This portfolio website is designed to showcase my skills, projects, and experience. It provides an interactive and visually appealing way for visitors to learn more about me and my work.
+![Coding](https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif)
+
+## About Me
+
+I'm dedicated to pushing the boundaries of technology through innovative solutions and captivating designs. With a passion for teaching and mentoring, I empower others to unlock their full potential in the digital world. Let's collaborate and bring your ideas to life.
+
+## Skills
+
+- **HTML**
+- **CSS**
+- **Sass**
+- **React.js**
+- **React Native**
+- **JavaScript**
+- **PHP**
+- **MySQL**
+- **Laravel**
+- **Figma**
+- **Git**
+
+I also have experience in graphic design using Canva.
+
+## Connect with Me
+
+[![Twitter](https://img.shields.io/twitter/follow/iwmvictor?logo=twitter&style=for-the-badge)](https://twitter.com/iwmvictor)
+
+## GitHub Stats
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iwmvictor&layout=compact&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=iwmvictor&show_icons=true&theme=tokyonight)
+
 
 ## Preview
 
@@ -26,26 +55,3 @@ This portfolio website is designed to showcase my skills, projects, and experien
 - Font Awesome (for icons)
 - Owl Carousel (for project carousel)
 - Google Fonts (for typography)
-
-##codes used
-
-1. contact form to google sheet:
-   
-    <script>
-        const scriptURL = '[url here]'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
