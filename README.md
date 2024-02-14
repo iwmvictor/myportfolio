@@ -8,7 +8,8 @@ A passionate Software Developer and Tech Enthusiast
 
 I'm dedicated to pushing the boundaries of technology through innovative solutions and captivating designs. With a passion for teaching and mentoring, I empower others to unlock their full potential in the digital world. Let's collaborate and bring your ideas to life.
 
-## Skills
+## Skills 
+##### Technologies i use
 
 - **HTML**
 - **CSS**
@@ -24,13 +25,8 @@ I'm dedicated to pushing the boundaries of technology through innovative solutio
 
 I also have experience in graphic design using Canva.
 
-## Connect with Me
-
-[![Twitter](https://img.shields.io/twitter/follow/iwmvictor?logo=twitter&style=for-the-badge)](https://twitter.com/iwmvictor)
 
 ## GitHub Stats
-
-[![Sarthak's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=iwmvictor&&theme=xcode)](https://github.com/iwmvictor)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iwmvictor&layout=compact&theme=tokyonight)
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=iwmvictor&show_icons=true&theme=tokyonight)
