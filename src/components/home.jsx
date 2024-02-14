@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import axios from "axios";
+import YouTube from "react-youtube";
+import GitHubCalendar from "github-calendar";
+
 import {
+  FaArrowRight,
+  FaCircle,
   FaComment,
   FaCommentSms,
   FaCss3,
+  FaEnvelope,
   FaEye,
   FaFacebookF,
   FaFigma,
@@ -12,13 +19,16 @@ import {
   FaJava,
   FaLaravel,
   FaLinkedinIn,
+  FaLock,
   FaNodeJs,
+  FaPhone,
   FaPhp,
   FaReact,
   FaRegComment,
   FaRegThumbsDown,
   FaRegThumbsUp,
   FaSass,
+  FaShare,
   FaThumbsUp,
   FaTwitter,
   FaWhatsapp,
@@ -31,6 +41,7 @@ import {
   SiMongodb,
   SiJavascript,
   SiCss3,
+  SiBuymeacoffee,
 } from "react-icons/si";
 import { FaCommentAlt, FaHistory, FaLongArrowAltRight } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -48,6 +59,8 @@ import blog3 from "./../assets/blog/blog3.jpg";
 import blog4 from "./../assets/blog/blog4.jpg";
 
 function Home() {
+  const [videos, setVideos] = useState([]);
+
   function handleContextMenu(event) {
     event.preventDefault();
   }
@@ -62,6 +75,33 @@ function Home() {
   ]);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentService, setCurrentService] = useState("");
+
+  const playerRef = useRef(null);
+  const opts = {
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      controls: 0,
+      allowfullscreen: 1,
+    },
+  };
+
+  useEffect(() => {
+    async function fetchVideos() {
+      try {
+        const API_KEY = "YOUR_API_KEY";
+        const CHANNEL_ID = "YUC7Sa2r7VEKYOkmNQySv2aUw";
+        const response = await axios.get(
+          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3&type=video`
+        );
+        setVideos(response.data.items);
+      } catch (error) {
+        console.error("Error fetching videos:", error);
+      }
+    }
+    fetchVideos();
+  }, []);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -135,7 +175,10 @@ function Home() {
           <div className="sec-title">
             <span></span>
             <h1>My Works</h1>
-            <p>Checkout a few of my projects!</p>
+            <p>
+              Each project is a unique piece of development that showcases my
+              skills. 🧩
+            </p>
           </div>
           <div className="projects">
             {/* PROJECT 1 */}
@@ -770,6 +813,30 @@ function Home() {
           </div>
           <div className="articles-action">
             <a href="">read more</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="home-donate">
+        <div className="container">
+          <div className="donations">
+            {/* <div className="channel">
+              <h2>Latest Videos</h2>
+              <ul>
+                {videos.map((video) => (
+                  <li key={video.id.videoId}>
+                    <img
+                      src={video.snippet.thumbnails.default.url}
+                      alt={video.snippet.title}
+                    />
+                    <p>{video.snippet.title}</p>
+                  </li>
+                ))}
+              </ul>
+            </div> */}
+            <div className="donate-card">
+              
+            </div>
           </div>
         </div>
       </div>
