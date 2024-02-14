@@ -1045,6 +1045,9 @@ img {
     margin-top: 10px;
     padding: 15px 0 20px;
     background: rgb(18, 18, 23);
+    background-size: cover;
+    background-position: center;
+    background: url("./../assets/other/herobg.png");
 
     p {
       text-align: center;

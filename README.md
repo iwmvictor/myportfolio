@@ -45,3 +45,4 @@ I also have experience in graphic design using Canva.
 - Twitter: [![Twitter](https://img.shields.io/badge/Twitter-Follow-lightblue?style=flat&logo=twitter)](https://twitter.com/iwmvictor)
 - TikTok: [![TikTok](https://img.shields.io/badge/TikTok-Follow-red?style=flat&logo=tiktok)](https://www.tiktok.com/@iwmvictor)
 - YouTube: [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=flat&logo=youtube)](https://youtube.com/@iwmvik)
+- LinkedIn: [https://www.linkedin.com/in/iwmvictor](https://www.linkedin.com/in/iwmvictor)
