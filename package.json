@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "github-calendar": "^2.3.2",
+    "node-fetch": "^3.3.2",
+    "notiflix": "^3.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -28,5 +32,10 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "sass": "^1.70.0",
     "vite": "^5.1.0"
-  }
+  },
+  "description": "Welcome to my GitHub repository where I showcase my journey as a computer engineering student with a passion for development, programming, and graphic design. Feel free to explore my projects and get in touch for collaborations or to learn more about my work.",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

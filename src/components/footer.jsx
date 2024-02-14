@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaEnvelope,
   FaFacebookF,
@@ -16,8 +16,52 @@ import {
 import { SiBuymeacoffee } from "react-icons/si";
 
 import logo from "./../assets/brand/logo.png";
+import Notiflix from "notiflix";
 
 function Footer() {
+  const nameRef = useRef();
+  const emailRef = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+    };
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwZ1Wg9vGshbKyPAADpS5_FesdjzTl2NdxqdntCvjXXvmFq56PISrPeRVI3Z5FZfDYO5w/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        Notiflix.Notify.success("Form submitted successfully!", {
+          timeout: 6666,
+        });
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      Notiflix.Notify.failure(
+        "Failed to submit form. Please try again later.",
+        {
+          timeout: 6666,
+        }
+      );
+    }
+  };
+
   return (
     <>
       <div className="footer">
@@ -41,19 +85,19 @@ function Footer() {
                   <h2>Quick Links</h2>
                   <ul>
                     <li>
-                      <a href="">About me</a>
+                      <a href="#about">About me</a>
                     </li>
                     <li>
-                      <a href="">services</a>
+                      <a href="#skills">services</a>
                     </li>
                     <li>
-                      <a href="">projects</a>
+                      <a href="#projects">projects</a>
                     </li>
                     <li>
-                      <a href="">testimonials</a>
+                      <a href="#home">testimonials</a>
                     </li>
                     <li>
-                      <a href="">contact</a>
+                      <a href="#socialMediaLinks">contact</a>
                     </li>
                   </ul>
                 </div>
@@ -61,10 +105,20 @@ function Footer() {
               <div className="col-4">
                 <div className="footer-form">
                   <h2>Newsletter Signup</h2>
-                  <form>
-                    <input type="text" placeholder="Your Name" required />
+                  <form onSubmit={handleSubmit}>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      ref={nameRef}
+                      required
+                    />
 
-                    <input type="email" placeholder="Your Email" required />
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      ref={emailRef}
+                      required
+                    />
 
                     <button type="submit" className="btn">
                       Submit
@@ -73,7 +127,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="footer-social">
+            <div className="footer-social" id="socialMediaLinks">
               <ul>
                 <li>
                   <a href="https://github.com/iwmvictor">

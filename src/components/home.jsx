@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import Notiflix from "notiflix";
 import axios from "axios";
-import YouTube from "react-youtube";
-import GitHubCalendar from "github-calendar";
 
 import {
   FaArrowRight,
@@ -59,7 +58,19 @@ import blog3 from "./../assets/blog/blog3.jpg";
 import blog4 from "./../assets/blog/blog4.jpg";
 
 function Home() {
-  const [videos, setVideos] = useState([]);
+  const encodeMessage = () => {
+    const message =
+      " ```Hi Iwmvictor,``` \n\n _I've had the chance to review your *portfolio* and I'm impressed with your work. *I'd like to schedule a call to discuss a potential job offer.* When would be a good time for you?_ ";
+    return encodeURIComponent(message);
+  };
+
+  const openWhatsApp = () => {
+    const encodedMessage = encodeMessage();
+    window.open(
+      `https://wa.me/250781996271?text=${encodedMessage}&type=phone_number&app_absent=0`,
+      "_blank"
+    );
+  };
 
   function handleContextMenu(event) {
     event.preventDefault();
@@ -73,35 +84,9 @@ function Home() {
     "Entrepreneur",
     "Freelancer",
   ]);
+
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentService, setCurrentService] = useState("");
-
-  const playerRef = useRef(null);
-  const opts = {
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-      mute: 1,
-      controls: 0,
-      allowfullscreen: 1,
-    },
-  };
-
-  useEffect(() => {
-    async function fetchVideos() {
-      try {
-        const API_KEY = "YOUR_API_KEY";
-        const CHANNEL_ID = "YUC7Sa2r7VEKYOkmNQySv2aUw";
-        const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3&type=video`
-        );
-        setVideos(response.data.items);
-      } catch (error) {
-        console.error("Error fetching videos:", error);
-      }
-    }
-    fetchVideos();
-  }, []);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -124,11 +109,11 @@ function Home() {
 
   return (
     <div className="home">
-      <div className="home-hero">
+      <div className="home-hero" id="home">
         <div className="container">
           <div className="row">
             <div className="col-5">
-              <div>
+              <div className="hero-img">
                 <img
                   src={heroImg}
                   alt="Iwmvictor"
@@ -141,7 +126,7 @@ function Home() {
               <div className="hero-text">
                 <h1>
                   victor <br />
-                  Isingizwe munezero{" "}
+                  Isingizwe munezero
                 </h1>
                 <span className="service-span">{currentService || "_"}</span>
                 <p>
@@ -155,12 +140,12 @@ function Home() {
                 <div className="hero-action">
                   <ul>
                     <li>
-                      <a href="" className="btn">
+                      <a href="/resume" className="btn">
                         View Resume
                       </a>
                     </li>
                     <li>
-                      <a href="">What Can I do for you?</a>
+                      <a onClick={openWhatsApp}>What Can I do for you?</a>
                     </li>
                   </ul>
                 </div>
@@ -170,7 +155,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-project">
+      <div className="home-project" id="projects">
         <div className="container">
           <div className="sec-title">
             <span></span>
@@ -453,7 +438,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-skills">
+      <div className="home-skills" id="skills">
         <div className="container">
           <div className="sec-title">
             <span></span>
@@ -562,7 +547,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-about">
+      <div className="home-about" id="about">
         <div className="container">
           <div className="sec-title">
             <span></span>
@@ -619,7 +604,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-blog">
+      <div className="home-blog" id="blog">
         <div className="container">
           <div className="sec-title">
             <span></span>
@@ -817,7 +802,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-donate">
+      <div className="home-donate" id="donate">
         <div className="container">
           <div className="donations">
             {/* <div className="channel">
@@ -834,9 +819,7 @@ function Home() {
                 ))}
               </ul>
             </div> */}
-            <div className="donate-card">
-              
-            </div>
+            <div className="donate-card"></div>
           </div>
         </div>
       </div>
