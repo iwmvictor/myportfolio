@@ -30,9 +30,12 @@ I also have experience in graphic design using Canva.
 
 ## GitHub Stats
 
+[![Sarthak's GitHub activity graph](https://activity-graph.herokuapp.com/graph?username=iwmvictor&&theme=xcode)](https://github.com/iwmvictor)
+
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iwmvictor&layout=compact&theme=tokyonight)
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=iwmvictor&show_icons=true&theme=tokyonight)
 
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=iwmvictor&&theme=tokyonight" alt="Iwmvictor" /></p>
 
 ## Preview
 
