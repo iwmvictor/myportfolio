@@ -47,10 +47,10 @@ import { TbBrandReactNative } from "react-icons/tb";
 
 import heroImg from "./../assets/other/hero.png";
 import aboutImg from "./../assets/other/4.png";
-import project1 from "./../assets/projects/project1.webp";
-import project2 from "./../assets/projects/project2.webp";
-import project3 from "./../assets/projects/project3.webp";
-import project4 from "./../assets/projects/project4.webp";
+import project1 from "./../assets/projects/project1.png";
+import project2 from "./../assets/projects/project2.png";
+import project3 from "./../assets/projects/project3.png";
+import project4 from "./../assets/projects/project4.png";
 import project5 from "./../assets/projects/project5.webp";
 import blog1 from "./../assets/blog/blog1.jpg";
 import blog2 from "./../assets/blog/blog2.jpg";
@@ -172,7 +172,7 @@ function Home() {
                 <div className="project-description">
                   <div className="project-name">
                     <span></span>
-                    <h1>Tranq</h1>
+                    <h1>Realtor Marketplace</h1>
                   </div>
                   <p>
                     Tranq is an online platform designed to streamline hotel
@@ -228,11 +228,14 @@ function Home() {
                 <div className="project-description">
                   <div className="project-name">
                     <span></span>
-                    <h1>Nike Webstore</h1>
+                    <h1>Lawsight</h1>
                   </div>
                   <p>
-                    Nike Webstore is minimalistic e-commerce website where you
-                    can shop for the latest Nike products conveniently online.
+                    Legal Tech Platform is a revolutionary solution in the legal
+                    services landscape. This platform transforms the way legal
+                    services are delivered by providing a seamless and
+                    innovative digital experience for users seeking legal
+                    assistance.
                   </p>
                   <p>
                     Username: test@gmail.com <br />
@@ -261,7 +264,7 @@ function Home() {
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://github.com/Klab-Rwanda/legal-tech-frontend">
                           <FaGithub /> <span>Github Repo</span>
                         </a>
                       </li>
@@ -283,16 +286,16 @@ function Home() {
                 <div className="project-description">
                   <div className="project-name">
                     <span></span>
-                    <h1>Furniq Website</h1>
+                    <h1>Holiday Planner</h1>
                   </div>
                   <p>
-                    Furniq is an online marketplace where users can browse and
-                    purchase a wide variety of high-quality furniture items to
-                    enhance their living spaces.
-                  </p>
-                  <p>
-                    Stripe card no: <br />
-                    4242424242424242
+                    Holiday Planner is a React-based web application tailored
+                    for travel and tourism businesses, tour operators, and
+                    travel bloggers. It offers an intuitive platform for
+                    planning and booking tours, excursions, and travel
+                    experiences. With a responsive design and easy
+                    customization, it caters to various travel and tour-related
+                    ventures.
                   </p>
                   <div className="language">
                     <span>
@@ -302,7 +305,10 @@ function Home() {
                       <FaSass /> SASS
                     </span>
                     <span>
-                      <SiSanity /> Sanity CMS
+                      <FaNodeJs /> Node JS
+                    </span>
+                    <span>
+                      <SiExpress /> Express JS
                     </span>
                   </div>
                   <div className="action">
@@ -335,7 +341,7 @@ function Home() {
                 <div className="project-description">
                   <div className="project-name">
                     <span></span>
-                    <h1>pixar remake</h1>
+                    <h1>Portfolio Website</h1>
                   </div>
                   <p>
                     The Pixar Website Remake is recreation of the iconic Pixar
