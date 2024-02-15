@@ -175,10 +175,12 @@ function Home() {
                     <h1>Realtor Marketplace</h1>
                   </div>
                   <p>
-                    Tranq is an online platform designed to streamline hotel
-                    management operations. It provides a comprehensive solution
-                    for hotel owners and staff to manage reservations and
-                    enhance the overall guest experience.
+                    Your Premier Real Estate Hub in Rwanda. Connecting realtor
+                    agents and agencies with prospective clients, our platform
+                    offers a comprehensive marketplace for buying and renting
+                    properties, facilitating seamless transactions and
+                    empowering individuals to find their dream home or
+                    investment opportunity in Rwanda.
                   </p>
                   <p>
                     Username: test@gmail.com <br />
@@ -192,21 +194,18 @@ function Home() {
                       <FaSass /> SASS
                     </span>
                     <span>
-                      <SiSanity /> Sanity CMS
-                    </span>
-                    <span>
                       <SiTypescript /> Typescript
                     </span>
                   </div>
                   <div className="action">
                     <ul>
                       <li>
-                        <a href="">
+                        <a href="https://rwandanna.netlify.app/">
                           <FaEye /> <span>Live preview</span>
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://github.com/meyvndev/rwandanna">
                           <FaGithub /> <span>Github Repo</span>
                         </a>
                       </li>
@@ -259,7 +258,7 @@ function Home() {
                   <div className="action">
                     <ul>
                       <li>
-                        <a href="">
+                        <a href="https://legal-tech-seven.vercel.app/">
                           <FaEye /> <span>Live preview</span>
                         </a>
                       </li>
@@ -314,12 +313,12 @@ function Home() {
                   <div className="action">
                     <ul>
                       <li>
-                        <a href="">
+                        <a href="https://holiday-planner.netlify.app/">
                           <FaEye /> <span>Live preview</span>
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://github.com/iwmvictor/holiday-planner">
                           <FaGithub /> <span>Github Repo</span>
                         </a>
                       </li>
@@ -366,12 +365,12 @@ function Home() {
                   <div className="action">
                     <ul>
                       <li>
-                        <a href="">
+                        <a href="https://iwmvictor.vercel.app/">
                           <FaEye /> <span>Live preview</span>
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href="https://github.com/iwmvictor">
                           <FaGithub /> <span>Github Repo</span>
                         </a>
                       </li>
@@ -388,58 +387,7 @@ function Home() {
               </div>
             </div>
             {/* PROJECT 5 */}
-            <div className="project row">
-              <div className="col-6">
-                <div className="project-description">
-                  <div className="project-name">
-                    <span></span>
-                    <h1>zen landing page</h1>
-                  </div>
-                  <p>
-                    Zen is a mobile-ready, responsive, cross-browser compatible
-                    and appealing resort website template. If you are in the
-                    accommodation business, make sure your rooms are occupied
-                    throughout the entire year.
-                  </p>
-
-                  <div className="language">
-                    <span>
-                      <FaHtml5 /> HTML
-                    </span>
-                    <span>
-                      <FaSass /> SASS
-                    </span>
-                    <span>
-                      <SiCss3 /> CSS
-                    </span>
-                    <span>
-                      <SiJavascript /> Javascript
-                    </span>
-                  </div>
-                  <div className="action">
-                    <ul>
-                      <li>
-                        <a href="">
-                          <FaEye /> <span>Live preview</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <FaGithub /> <span>Github Repo</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="project-preview">
-                  <div>
-                    <img src={project5} alt="Tranq Website" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
