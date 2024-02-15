@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout.jsx";
 import Home from "./components/home.jsx";
 import Resume from "./components/resume.jsx";
-import { Analytics } from "@vercel/analytics/react"; // Import Analytics component
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
