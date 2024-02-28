@@ -8,6 +8,10 @@ Description: This code was developed by Iwmvictor as a part of their software de
 @import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 :root {
   // colors
   --primary-color: rgb(24, 24, 32);
@@ -231,7 +235,7 @@ img {
   box-shadow: 0 1px 1px var(--secondary-color);
   transition: all 06s ease;
 
-  &.scrolling{
+  &.scrolling {
     background: var(--primary-color);
     box-shadow: 0 0 1px var(--secondary-color);
   }
@@ -298,7 +302,6 @@ img {
 .home {
   width: 100%;
 
-
   .sec-title {
     padding: 40px 0 30px;
 
@@ -350,6 +353,7 @@ img {
           var(--accent-color),
           var(--white-color)
         );
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -523,7 +527,7 @@ img {
         .project-preview {
           border-radius: 0.875rem;
           overflow: hidden;
-          height: 30rem;
+          height: 25rem;
           scroll-behavior: smooth;
           transition: var(--transition);
 
@@ -538,7 +542,7 @@ img {
               transition: transform 5s ease-in-out;
 
               &:hover {
-                transform: translateY(calc(-100% + 22rem));
+                transform: translateY(calc(-100% + 25rem + 5px));
               }
             }
           }
@@ -859,6 +863,248 @@ img {
     }
   }
 
+  .booking-card {
+    .cards {
+      margin: 35px 0;
+
+      .course-card {
+        padding: 10px;
+        display: grid;
+        border-radius: 8px;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 20px;
+        background: var(--secondary-color);
+
+        .img {
+          width: 100%;
+          max-width: 100%;
+
+          img {
+            width: 100%;
+            height: 280px;
+            max-height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+        }
+
+        .description {
+          .header-txt {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 20px 5px 0;
+            text-transform: capitalize;
+
+            span {
+              display: flex;
+              align-items: center;
+              color: var(--white-color);
+              justify-content: space-between;
+
+              h3 {
+                font-family: "Protest Guerrilla", sans-serif;
+                font-size: 24px;
+                margin: 0;
+              }
+              svg {
+                font-size: 20px;
+                color: #ffc107;
+                margin-right: 5px;
+              }
+            }
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-weight: lighter;
+            font-family: "Poppins", sans-serif;
+          }
+
+          .icons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            grid-gap: 10px;
+            margin-bottom: 10px;
+
+            span {
+              width: 50px;
+              height: 50px;
+              padding: 10px;
+              display: flex;
+              font-size: 18px;
+              align-items: center;
+              justify-content: center;
+              color: var(--white-color);
+              background: var(--primary-color);
+              border-radius: 100%;
+              cursor: pointer;
+              transition: var(--transition);
+              opacity: 0.6; /* Initial opacity for all icons */
+
+              &:hover {
+                opacity: 1; /* Full opacity on hover */
+              }
+
+              // Style the title attribute
+              &[title] {
+                position: relative;
+
+                &:hover::after {
+                  content: attr(title);
+                  position: absolute;
+                  top: -30px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  padding: 5px;
+                  font-size: 14px;
+                  border-radius: 5px;
+                  white-space: nowrap;
+                  font-weight: lighter;
+                  color: var(--white-color);
+                  background: var(--tertiary-color);
+                  opacity: 0;
+                  transition: opacity 0.3s ease;
+                }
+
+                &:hover::before {
+                  content: "";
+                  position: absolute;
+                  top: -5px;
+                  left: calc(50% - 5px);
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: transparent transparent #333 transparent;
+                  opacity: 0;
+                  transition: opacity 0.3s ease;
+                }
+
+                &:hover::after,
+                &:hover::before {
+                  opacity: 1;
+                  background: var(--tertiary-color);
+                }
+              }
+            }
+          }
+
+          .action {
+            margin: 10px 0;
+
+            a {
+              opacity: 0.8;
+              font-size: 16px;
+              padding: 10px 20px;
+              margin-right: 10px;
+              border-radius: 5px;
+              align-items: center;
+              display: inline-flex;
+              color: var(--white-color);
+              text-transform: capitalize;
+              background: var(--accent-color);
+              border: 1px solid var(--accent-color);
+              transition: var(--transition);
+              cursor: pointer;
+
+              &:last-child {
+                background: transparent;
+                border-color: var(--text-color);
+              }
+
+              &:hover {
+                opacity: 1;
+                color: var(--white-color);
+                background: var(--accent-color);
+                border-color: var(--accent-color);
+              }
+
+              svg {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .detail-modal{
+    position: absolute;
+    margin: auto;
+    transform: translate(0 -50%);
+  }
+  .opacity {
+    opacity: 0.9; 
+    margin: auto;
+    max-width: 900px;
+    background: var(--secondary-color);
+
+    .content {
+      // Styles for the content container
+      margin: 0 auto; // Center align content
+      max-width: 800px; // Example max width
+      padding: 20px; // Example padding
+      // Other content container styles
+      h2 {
+        // Styles for the heading
+        font-size: 24px; // Example font size
+        // Other heading styles
+      }
+      p {
+        // Styles for paragraphs
+        font-size: 16px; // Example font size
+        // Other paragraph styles
+      }
+      span {
+        // Styles for spans
+        font-weight: bold; // Example font weight
+        // Other span styles
+      }
+      .thecols {
+        // Styles for two-column layout
+        display: flex;
+        justify-content: space-between;
+        .why,
+        .col {
+          flex: 0 0 48%; // Example column width
+        }
+      }
+      .register {
+        // Styles for the registration section
+        margin-top: 20px; // Example margin top
+        h3 {
+          // Styles for registration heading
+          font-size: 20px; // Example font size
+          // Other registration heading styles
+        }
+        p {
+          // Styles for registration paragraph
+          font-size: 16px; // Example font size
+          // Other registration paragraph styles
+        }
+        a {
+          // Styles for registration link
+          display: inline-block;
+          padding: 10px 20px; // Example padding
+          background-color: #007bff; // Example background color
+          color: #fff; // Example text color
+          text-decoration: none;
+          font-weight: bold; // Example font weight
+          border-radius: 5px; // Example border radius
+          // Other registration link styles
+          &:hover {
+            background-color: #0056b3; // Example hover background color
+            // Other hover styles
+          }
+        }
+      }
+    }
+  }
+
   // NOT YET FINISHED
   .home-donate {
     padding: 40px 0;
@@ -912,7 +1158,7 @@ img {
       cursor: pointer;
       transition: background-color 0.3s ease;
 
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
 

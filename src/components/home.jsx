@@ -56,6 +56,7 @@ import blog1 from "./../assets/blog/blog1.jpg";
 import blog2 from "./../assets/blog/blog2.jpg";
 import blog3 from "./../assets/blog/blog3.jpg";
 import blog4 from "./../assets/blog/blog4.jpg";
+import Bookingcard from "./plus/bookingcard";
 
 function Home() {
   const encodeMessage = () => {
@@ -756,10 +757,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-donate" id="donate">
+      {/* <Bookingcard/> */}
+
+      {/* <div className="home-donate" id="donate">
         <div className="container">
           <div className="donations">
-            {/* <div className="channel">
+            <div className="channel">
               <h2>Latest Videos</h2>
               <ul>
                 {videos.map((video) => (
@@ -772,11 +775,11 @@ function Home() {
                   </li>
                 ))}
               </ul>
-            </div> */}
+            </div>
             <div className="donate-card"></div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
